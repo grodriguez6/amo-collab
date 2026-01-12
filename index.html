@@ -12,18 +12,50 @@
             background-color: #09090b; 
             color: #d4d4d8; 
             line-height: 1.6;
+            position: relative;
         }
+        
+        /* THE BACKGROUND GRAPH LOGIC */
+        .graph-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Replace 'graph.png' with your actual filename */
+            background-image: url('vault_research.png'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.12; /* Adjust this for transparency */
+            z-index: -2;
+            filter: grayscale(20%) brightness(80%);
+        }
+
+        /* VIGNETTE OVERLAY to keep text clear */
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(9,9,11,0.7) 0%, rgba(9,9,11,0.98) 90%);
+            z-index: -1;
+        }
+
         .mono { font-family: 'JetBrains Mono', monospace; }
         .accent-border { border-color: rgba(63, 63, 70, 0.4); }
-        .glow-indigo { box-shadow: 0 0 20px rgba(79, 70, 229, 0.05); }
+        .glow-indigo { box-shadow: 0 0 40px rgba(79, 70, 229, 0.03); }
         a { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-        .nav-link:hover { color: #ffffff; border-bottom: 1px solid #6366f1; }
-        .card { background-color: rgba(24, 24, 27, 0.5); border: 1px solid rgba(63, 63, 70, 0.4); }
+        .card { background-color: rgba(15, 15, 18, 0.8); border: 1px solid rgba(63, 63, 70, 0.4); backdrop-filter: blur(4px); }
     </style>
 </head>
 <body class="selection:bg-indigo-500 selection:text-white antialiased">
 
-    <div class="max-w-3xl mx-auto px-6 py-20 md:py-32">
+    <!-- Background Layers -->
+    <div class="graph-bg"></div>
+    <div class="vignette"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-32">
         
         <!-- Header -->
         <header class="mb-24">
@@ -64,8 +96,7 @@
                 </ul>
                 <div class="border-l-2 border-indigo-900/50 pl-8 mt-12 py-2">
                     <p class="italic text-zinc-400 text-sm leading-relaxed">
-                        AMO is not automation. It’s a way of thinking and working—using AI models and human orchestrators as collaborative intelligence
-  for rapid hypothesis generation, critique, and synthesis.
+                        AMO is not automation. It’s a way of thinking and working—using AI models and human orchestrators as collaborative intelligence for rapid hypothesis generation, critique, and synthesis.
                     </p>
                 </div>
             </div>
@@ -113,7 +144,7 @@
         </section>
 
         <!-- Collaboration -->
-        <section class="mb-28 bg-indigo-950/10 border border-indigo-500/20 p-10 rounded-sm">
+        <section class="mb-28 bg-indigo-950/10 border border-indigo-500/20 p-10 rounded-sm card">
             <h2 class="mono text-[10px] text-indigo-400 uppercase tracking-[0.3em] mb-8 font-bold">What I’m Building</h2>
             <div class="space-y-8">
                 <p class="text-zinc-200 text-lg">
@@ -144,14 +175,14 @@
                 <div class="flex flex-col md:flex-row md:items-start md:gap-10">
                     <span class="text-zinc-600 w-20">Email:</span>
                     <div class="flex flex-col gap-2">
-                        <a href="mailto:grodriguez6@gatech.edu" class="text-zinc-300 hover:text-white transition-colors underline decoration-zinc-800 underline-offset-4">grodriguez6@gatech.edu</a>
-                        <a href="mailto:greggory.rodriguez6@yahoo.com" class="text-zinc-300 hover:text-white transition-colors underline decoration-zinc-800 underline-offset-4">greggory.rodriguez6@yahoo.com</a>
+                        <a href="mailto:grodriguez6@gatech.edu" class="text-zinc-300 hover:text-white transition-colors underline decoration-zinc-800 underline-offset-4 font-bold">grodriguez6@gatech.edu</a>
+                        <a href="mailto:greggory.rodriguez6@yahoo.com" class="text-zinc-300 hover:text-white transition-colors underline decoration-zinc-800 underline-offset-4 font-bold">greggory.rodriguez6@yahoo.com</a>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
 </body>
-
 </html>
