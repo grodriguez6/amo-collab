@@ -1,4 +1,4 @@
-Greggory Rodriguez
+Greggory Rodriguez <br>
 Independent Researcher
 Research Collaboration Splash Page
 https://grodriguez6.github.io/amo-collab
