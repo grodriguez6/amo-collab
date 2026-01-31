@@ -1,3 +1,21 @@
+<h2 align="center">AMO Knowledge Graph</h2>
+
+<p align="center">
+  <a href="00003.png">
+    <img 
+      src="00003.png" 
+      alt="AMO Vault Node Graph"
+      width="800"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <em>Snapshot of AMO-related Obsidian vault nodes (2026-01-31)</em>
+</p>
+
+
+
 Greggory Rodriguez <br>
 Independent Researcher <br> 
 Research Collaboration Splash Page <br>
